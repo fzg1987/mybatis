@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fzg.repository.MyClassRepository">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache">
+        <!-- 缓存创建以后，最后一次访问缓存的时间至失效的时间间隔 -->
+        <property name="timeToIdleSeconds" value="3600"/>
+        <!-- 缓存自创建时间起至失效时间的时间间隔 -->
+        <property name="timeToLiveSeconds" value="3600"/>
+        <!-- 缓存回收策略，LRU移除近期最少使用的对象 -->
+        <property name="memoryStoreEvictionPolicy" value="LRU"/>
+    </cache>
+
     <select id="findById" parameterType="java.lang.Integer" resultType="com.fzg.entity.MyClass">
         select * from t_classes where id = #{id}
     </select>

@@ -34,6 +34,13 @@
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
         </dependency>
+
+        <!-- ehcache第三方二级缓存-->
+        <dependency>
+            <groupId>org.mybatis.caches</groupId>
+            <artifactId>mybatis-ehcache</artifactId>
+            <version>1.2.2</version>
+        </dependency>
     </dependencies>
 
     <!-- 读取resources路径下的XML文件-->
