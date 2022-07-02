@@ -19,6 +19,10 @@
     <mappers>
         <mapper resource="com/fzg/mapper/PeopleMapper.xml"/>
         <mapper resource="com/fzg/repository/PeopleRepository.xml"/>
+        <mapper resource="com/fzg/repository/StudentRepository.xml"/>
+        <mapper resource="com/fzg/repository/ClassesRepository.xml"/>
+        <mapper resource="com/fzg/repository/AccountRepository.xml"/>
+        <mapper resource="com/fzg/repository/CourseRepository.xml"/>
     </mappers>
 
 </configuration>

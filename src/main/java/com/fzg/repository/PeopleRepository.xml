@@ -16,4 +16,19 @@
     <select id="findAll" resultType="com.fzg.entity.People">
         select * from people
     </select>
+    <select id="findById2" parameterType="int" resultType="com.fzg.entity.People">
+        select * from people where id = #{id}
+    </select>
+    <select id="findByName" parameterType="java.lang.String" resultType="com.fzg.entity.People">
+        select * from people where name = #{name}
+    </select>
+    <select id="findByIdName" resultType="com.fzg.entity.People">
+        select * from people where id = #{param1} and name = #{param2}
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from people
+    </select>
+    <select id="findName" resultType="java.lang.String" parameterType="java.lang.Integer">
+        select name from people where id = #{id}
+    </select>
 </mapper>

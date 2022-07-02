@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fzg.repository.ClassesRepository">
+    <resultMap id="classesMap" type="com.fzg.entity.Classes">
+        <id column="cid" property="id"/>
+        <result column="cname" property="name"/>
+        <collection property="students" ofType="com.fzg.entity.Student">
+            <id column="sid" property="id"/>
+            <result column="sname" property="name"/>
+        </collection>
+    </resultMap>
+    <select id="findById" parameterType="java.lang.Integer" resultMap="classesMap">
+        select c.id cid,c.name cname,s.id sid,s.name sname from t_classes c, t_student s where c.id = #{id} and c.id = s.cid
+    </select>
+</mapper>

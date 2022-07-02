@@ -31,10 +31,20 @@ public class TestPeopleRepository {
 //        peopleRepository.update(people);
 //        peopleRepository.deleteById(4);
 //        sqlSession.commit();
-        List<People> peopleList =  peopleRepository.findAll();
-        for (People people : peopleList) {
-            System.out.println(people);
-        }
+//        List<People> peopleList =  peopleRepository.findAll();
+//        for (People people : peopleList) {
+//            System.out.println(people);
+//        }
+//        People people = peopleRepository.findById2(3);
+//        System.out.println(people);
+//        people = peopleRepository.findByName("张三");
+//        System.out.println(people);
+//        people = peopleRepository.findByIdName(2,"李四");
+//        System.out.println(people);
+        int count = peopleRepository.count();
+        System.out.println("count = "+count);
+        String name = peopleRepository.findName(2);
+        System.out.println("name[2] = " + name);
         sqlSession.close();
     }
 }
