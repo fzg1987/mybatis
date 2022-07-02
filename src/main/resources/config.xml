@@ -2,7 +2,10 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <settings>
+        <!-- 打印SQL -->
         <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!-- 延迟加载 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
     </settings>
 
     <!-- 配置 MyBatis 运行环境 -->
@@ -27,6 +30,9 @@
         <mapper resource="com/fzg/repository/ClassesRepository.xml"/>
         <mapper resource="com/fzg/repository/AccountRepository.xml"/>
         <mapper resource="com/fzg/repository/CourseRepository.xml"/>
+        <mapper resource="com/fzg/repository/OrderRepository.xml"/>
+        <mapper resource="com/fzg/repository/CustomerRepository.xml"/>
+        <mapper resource="com/fzg/repository/MyClassRepository.xml"/>
     </mappers>
 
 </configuration>

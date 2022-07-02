@@ -36,7 +36,21 @@ create table `account_course`(
     constraint `account_course_ibfk_1` foreign key (`aid`) references `t_account`(`id`),
     constraint `account_course_ibfk_2` foreign key (`cid`) references `t_course`(`id`)
 );
-
+# 客户表
+drop table if exists `customer`;
+create table `customer`(
+    `id` int(11) NOT NULL primary key auto_increment,
+    `name` varchar(11) default null
+);
+# 订单表
+drop table if exists `order`;
+create table `order`(
+    `id` int(11) NOT NULL primary key auto_increment,
+    `name` varchar(11) default null,
+    `cid` int(11) default null,
+    key `cid` (`cid`),
+    constraint `order_ibfk_1` foreign key (`cid`) references `customer`(`id`)
+);
 # 查询语句
 select s.id,s.name,c.id cid,c.name from t_student s, t_classes c where s.id = 1 and s.cid = c.id;
 select c.id cid,c.name cname,s.id sid,s.name sname from t_classes c, t_student s where c.id = 1 and c.id = s.cid;
