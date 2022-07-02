@@ -1,5 +1,3 @@
-package com.fzg.test;
-
 import com.fzg.entity.People;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

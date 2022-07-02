@@ -1,13 +1,9 @@
-package com.fzg.test;
-
-import com.fzg.entity.People;
 import com.fzg.repository.PeopleRepository;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.InputStream;
-import java.util.List;
 
 public class TestPeopleRepository {
     public static void main(String[] args) {
