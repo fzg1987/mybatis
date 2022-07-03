@@ -21,6 +21,7 @@ public class TestMulToMul {
         CourseRepository courseRepository = sqlSession.getMapper(CourseRepository.class);
         Course course = courseRepository.findById(1);
         System.out.println(course);
+        sqlSession.close();
     }
 
 }

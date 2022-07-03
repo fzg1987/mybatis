@@ -18,5 +18,6 @@ public class TestLazyLoad {
         OrderRepository orderRepository = sqlSession.getMapper(OrderRepository.class);
         Order order = orderRepository.findById(1);
         System.out.println(order.getCustomer().getName());
+        sqlSession.close();
     }
 }

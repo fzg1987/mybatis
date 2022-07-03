@@ -35,6 +35,7 @@
         <mapper resource="com/fzg/repository/OrderRepository.xml"/>
         <mapper resource="com/fzg/repository/CustomerRepository.xml"/>
         <mapper resource="com/fzg/repository/MyClassRepository.xml"/>
+        <mapper resource="com/fzg/repository/UserRepository.xml"/>
     </mappers>
 
 </configuration>

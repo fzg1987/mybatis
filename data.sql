@@ -51,6 +51,14 @@ create table `order`(
     key `cid` (`cid`),
     constraint `order_ibfk_1` foreign key (`cid`) references `customer`(`id`)
 );
+# 用户表
+drop table if exists `t_user`;
+create table `t_user`(
+    `id` int(11) NOT NULL primary key auto_increment,
+    `username` varchar(11) default null,
+    `password` varchar(11) default null,
+    `age` int(11) default null
+);
 # 查询语句
 select s.id,s.name,c.id cid,c.name from t_student s, t_classes c where s.id = 1 and s.cid = c.id;
 select c.id cid,c.name cname,s.id sid,s.name sname from t_classes c, t_student s where c.id = 1 and c.id = s.cid;

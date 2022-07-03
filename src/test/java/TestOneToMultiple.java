@@ -21,5 +21,6 @@ public class TestOneToMultiple {
         ClassesRepository classesRepository = sqlSession.getMapper(ClassesRepository.class);
         Classes classes = classesRepository.findById(1);
         System.out.println(classes);
+        sqlSession.close();
     }
 }
